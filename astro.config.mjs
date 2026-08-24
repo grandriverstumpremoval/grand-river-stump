@@ -1,10 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-    trailingSlash: 'always',
-    build: {
-        format: 'directory',
-    },
+
+  site: 'https://grandriverstumpremoval.ca',
+  trailingSlash: 'always',
+
+  build: {
+      format: 'directory',
+  },
+
+  integrations: [sitemap()],
 });
