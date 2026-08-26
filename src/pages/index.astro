@@ -11,47 +11,142 @@
 	<meta name="google-site-verification" content="XqBovmzz6BHm09OT5Dz7YDia5c6PMcEGVemykvY7ZWA" />
     <meta name="description" content="Professional tree stump grinding and yard restoration services in Paris Ontario, Brantford, and surrounding areas. Get a fast, free local estimate." />
     
-    <!-- Simple, fast CSS styling embedded directly to avoid complex CSS configurations -->
-    <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-      header { background: #1b4332; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-      .logo { font-weight: bold; font-size: 1.3rem; letter-spacing: -0.5px; }
-      .phone-link { color: #52b788; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
-      .hero { background: linear-gradient(rgba(27,67,50,0.85), rgba(27,67,50,0.85)), url('https://unsplash.com') center/cover; color: white; padding: 4rem 2rem; text-align: center; }
-      .hero h1 { margin: 0 0 1rem 0; font-size: 2.5rem; }
-      .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto; color: #d8f3dc; }
-      .container { max-width: 1000px; margin: 3rem auto; padding: 0 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-      @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
-      .form-box { background: white; padding: 2.5rem; rounded-radius: 8px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #2d6a4f; }
-      .form-box h3 { margin: 0 0 1.5rem 0; font-size: 1.5rem; color: #1b4332; }
-      .form-group { margin-bottom: 1.25rem; }
-      .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; color: #444; }
-      .form-group input, .form-group text-area, .form-group select { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
-      .submit-btn { background: #2d6a4f; color: white; border: none; padding: 1rem; width: 100%; font-size: 1.1rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
-      .submit-btn:hover { background: #1b4332; }
-      .privacy-note { font-size: 0.8rem; color: #666; margin-top: 1rem; text-align: center; line-height: 1.3; }
-      .content-box h2 { color: #1b4332; margin-top: 0; }
-      .content-box ul { padding-left: 1.2rem; line-height: 1.6; }
-      .content-box li { margin-bottom: 0.5rem; }
-      footer { background: #112211; color: #888; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 4rem; }
-      footer a { color: #bbb; text-decoration: none; }
-    </style>
+<!-- Simple, fast CSS styling with mobile friendly -->
+<style>
+		@media (max-width: 480px) {
+	/* On very small screens, stack the images vertically to avoid squishing */
+	.container div[style*="grid-template-columns: 1fr 1fr"] {
+		grid-template-columns: 1fr !important;
+		gap: 10px !important;
+	}
+	}
+
+	/* Baseline Overrides & Fluid Spacing Framework */
+	body { 
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+		margin: 0; 
+		padding: 0; 
+		color: #333; 
+		background-color: #fcfcfc; 
+		line-height: 1.5;
+	}
+  
+	/* Flex Header Bar optimized cleanly for Mobile Thumb Viewports */
+	header { 
+		background: #1b4332; 
+		color: white; 
+		padding: 1rem; 
+		display: flex; 
+		flex-direction: column; 
+		gap: 12px; 
+		align-items: center; 
+		border-bottom: 3px solid #52b788;
+	}
+	@media (min-width: 600px) {
+		header { flex-direction: row; justify-content: space-between; padding: 1rem 2rem; }
+	}
+	
+	.logo-wrapper { display: flex; align-items: center; gap: 10px; }
+	.logo-img { width: 40px; height: auto; object-fit: contain; }
+	.logo-text { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: white; }
+	
+	.phone-link { 
+		color: #52b788; 
+		text-decoration: none; 
+		font-weight: bold; 
+		font-size: 1.1rem; 
+		padding: 6px 12px;
+		border: 1px dashed #52b788;
+		border-radius: 4px;
+		background: rgba(82, 183, 136, 0.05);
+	}
+
+	/* Full-bleed Hero container displaying your custom background asset */
+	.hero { 
+		background: linear-gradient(rgba(18, 48, 35, 0.9), rgba(27, 67, 50, 0.85)), url('/hero-bg.jpg') center/cover no-repeat; 
+		color: white; 
+		padding: 3.5rem 1.25rem; 
+		text-align: center; 
+	}
+	.hero h1 { margin: 0 0 1rem 0; font-size: 2.2rem; line-height: 1.2; font-weight: 800; }
+	.hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; color: #d8f3dc; }
+	
+	/* Fluid Content Container Grid Layout rules */
+	.container { 
+		max-width: 1000px; 
+		margin: 1.5rem auto; 
+		padding: 0 1.25rem; 
+		display: grid; 
+		grid-template-columns: 1fr; 
+		gap: 2rem; 
+	}
+	@media (min-width: 768px) { 
+		.container { grid-template-columns: 1.1fr 0.9fr; margin: 3rem auto; gap: 3.5rem; } 
+	}
+	
+	/* Styled Info and Lead Collection Boxes */
+	.content-box { padding-right: 0; }
+	.content-box h2 { color: #1b4332; font-size: 1.75rem; margin-top: 0; font-weight: 700; }
+	.content-box h3 { color: #2d6a4f; margin-top: 1.75rem; font-size: 1.25rem; }
+	.content-box ul { padding-left: 0; list-style-type: none; }
+	
+	.form-box { 
+		background: white; 
+		padding: 1.5rem; 
+		border-radius: 8px; 
+		box-shadow: 0 10px 25px rgba(27, 67, 50, 0.08); 
+		border-top: 6px solid #2d6a4f; 
+		height: fit-content;
+	}
+	@media (min-width: 480px) { .form-box { padding: 2.25rem; } }
+	.form-box h3 { margin: 0 0 1.25rem 0; font-size: 1.4rem; color: #1b4332; font-weight: 700; }
+	
+	.form-group { margin-bottom: 1.25rem; }
+	.form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; color: #444; }
+	.form-group input, .form-group select { 
+		width: 100%; 
+		height: 46px; 
+		padding: 0.75rem; 
+		border: 1px solid #cccccc; 
+		border-radius: 4px; 
+		box-sizing: border-box; 
+		font-size: 1rem; 
+		background-color: #ffffff;
+		color: #333333;
+	}
+	.form-group input:focus, .form-group select:focus { border-color: #2d6a4f; outline: none; box-shadow: 0 0 0 3px rgba(45,106,79,0.15); }
+	
+	.submit-btn { 
+		background: #2d6a4f; 
+		color: white; 
+		border: none; 
+		padding: 1rem; 
+		width: 100%; 
+		font-size: 1.1rem; 
+		font-weight: bold; 
+		border-radius: 4px; 
+		cursor: pointer; 
+		transition: background 0.2s, transform 0.1s; 
+		box-shadow: 0 4px 12px rgba(45,106,79,0.2);
+		margin-top: 0.75rem;
+	}
+	.submit-btn:hover { background: #1b4332; }
+	.submit-btn:active { transform: scale(0.98); }
+	
+	.privacy-note { font-size: 0.75rem; color: #666; margin-top: 1.25rem; text-align: center; line-height: 1.4; }
+	footer { background: #112211; color: #99aab5; text-align: center; padding: 2.5rem 1.25rem; font-size: 0.85rem; margin-top: 5rem; border-top: 4px solid #1b4332; }
+	footer a { color: #d8f3dc; text-decoration: none; }
+	footer a:hover { text-decoration: underline; }
+</style>
   </head>
   <body>
 
-    <header>
+<header>
   <div class="logo-container" style="display: flex; align-items: center; gap: 10px;">
-    <!-- Clean, lightweight vector Tree Stump Logo -->
-    <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#52b788" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 22h20" />
-      <path d="M5 22v-5c0-3 2-5 5-5h4c3 0 5 2 5 5v5" />
-      <path d="M12 12V7c0-2-1-3-3-3" />
-      <path d="M14 12V5c0-1.5 1-2.5 2.5-2.5" />
-      <circle cx="12" cy="17" r="1" fill="#52b788" />
-      <circle cx="15" cy="19" r="1" fill="#52b788" />
-      <circle cx="9" cy="18" r="1" fill="#52b788" />
-    </svg>
-    <span class="logo" style="font-weight: bold; font-size: 1.3rem; color: white;">Grand River Stump Removal</span>
+    <!-- Clean, Tree Stump Logo -->
+    <img src="/logo.png" alt="Grand River Stump Removal Logo" style="width: 40px height: auto object-fit: contain;" />
+    
+	<span class="logo" style="font-weight: bold; font-size: 1.3rem; color: white;">Grand River Stump Removal</span>
   </div>
   <div>
     <!-- Your active mobile click-to-call link -->
@@ -76,8 +171,7 @@
       <section class="content-box">
         <h2>Local Residential Stump Grinding Solutions</h2>
         <p>Don't let ugly, rotting tree stumps ruin your lawn or damage your lawnmower blades. We connect you directly with specialized, local independent operators who focus strictly on efficient stump grinding—keeping your yard pristine and your costs predictable.</p>
-        <p>We are not a treeservice, landscaping  company, or a general yard maintenance. We focus 100% on gridning  out old tree roots.</p>
-
+        
         <h3>📍 Neighborhood Areas We Serve:</h3>
         <ul>
           <li><strong>Paris</strong> (North Paris, Mile Hill, Rest Acres area and Downtown)</li>
@@ -87,7 +181,7 @@
 
 		<h3>✔️ Why Homeowners Choose Our Specilaized Network:</h3>
 		<ul>
-		<li style="margin--bottom: 1.25rem; displayflex: gap: 10px; align-items: start;">
+		<li style="margin--bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
 		<span style="font-size: 1,2rem; line-height: 1;">🌿</span>
       	<span><strong>Tight-Space, Lawn-Safe Machinery:</strong> No massive commercial logging trucks or heavy tractors. Our operators utilize compact, agile grinding gear that easily rolls through a standard backyard fence gate without digging up your grass or rutting your gardens.</span>
     	</li>
@@ -115,6 +209,34 @@
 			<strong>Lawn-Safe Grinding:</strong> A local specialist rolls in with a compact machine, grinds the stump below ground level, updates you, and leaves your yard tidy.
 		  </li>
 		</ol>
+
+		 <!-- New High-Converting Local Visual Gallery -->
+  		<h3 style="color: #1b4332; margin-top: 2.5rem; border-top: 1px solid #e0e0e0; padding-top: 2rem;">📷 Our Recent Work in Paris & Brantford:</h3>
+  		<p style="color: #555; font-size: 0.95rem; margin-bottom: 1.5rem;">See how our independent network utilizes compact, residential-grade equipment to grind tree stumps safely below the turf line without tearing up your lawn.</p>
+
+  		<!-- Side-by-Side Before & After Visual Grid -->
+  		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 1.5rem;">
+    		<div style="position: relative;">
+      		<!-- Place your before/after stump image here -->
+      			<img src="/before-after_stump.jpg" alt="Before and after tree stump grinding a residential lawn in Paris Ontario" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);" />
+      			<span style="position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.7); color: white; padding: 2px 8px; font-size: 0.8rem; font-weight: bold; border-radius: 4px;">Before</span>
+		</div>
+    		<div style="position: relative;">
+      		<!-- Place your clean finished grass/mulch image here -->
+      			<img src="/stump-before-after.avif" alt="Clean lawn layout after tree root grinding" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);" />
+      			<span style="position: absolute; bottom: 8px; left: 8px; background: #2d6a4f; color: white; padding: 2px 8px; font-size: 0.8rem; font-weight: bold; border-radius: 4px;">After</span>
+    		</div>
+  		</div>
+
+  		<!-- Full-Width Lawn-Safe Machine Showcase Card -->
+		<div style="background-color: #f4f9f6; border: 1px solid #d8f3dc; padding: 1rem; border-radius: 6px; display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 1.5rem;">
+			<!-- Place your compact machine picture here -->
+			<img src="/machine__grinding.jpg" alt="Lawn-safe compact stump grinding equipment" style="width: 100%; max-height: 220px; object-fit: cover; border-radius: 4px;" />
+			<div style="text-align: center;">
+			<h4 style="margin: 0 0 5px 0; color: #1b4332; font-size: 1rem;">🛡️ Compact Residential Machinery</h4>
+			<p style="margin: 0; font-size: 0.85rem; color: #444; line-height: 1.4;">This is the exact scale of gear our network utilizes. It rolls through standard backyard gates effortlessly, leaving your flowerbeds, fencing, and turf completely untouched.</p>
+		</div>
+  </div>
 		</section>
 
       <!-- This plain HTML form hooks directly into Netlify's automatic database detection system -->
