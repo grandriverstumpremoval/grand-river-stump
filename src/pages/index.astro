@@ -51,13 +51,15 @@
 	.logo-text { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: white; }
 	.hero-content { display: flex; align-items: center; justify-content: center; gap: 1.75rem; max-width: 1100px; margin: 0 auto; text-align: left; }
 	.hero-logo {
-		width: clamp(260px, 30vw, 380px);
-		height: 280px;
-		object-fit: cover;
+		width: min(100%, 540px);
+		height: auto;
+		max-height: 420px;
+		object-fit: contain;
 		border-radius: 14px;
 		box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 		border: 3px solid rgba(255,255,255,0.25);
 		background: rgba(255,255,255,0.08);
+		filter: none;
 	}
 	@media (min-width: 600px) {
 		.logo-img { width: 56px; }
@@ -65,7 +67,7 @@
 	}
 	@media (max-width: 720px) {
 		.hero-content { flex-direction: column; text-align: center; }
-		.hero-logo { width: min(90vw, 320px); height: 220px; }
+		.hero-logo { width: min(92vw, 420px); height: auto; }
 	}
 	
 	.phone-link { 
@@ -176,10 +178,9 @@
 
     <section class="hero">
       <div class="hero-content">
-        <img class="hero-logo" src="/grinding%201.avif" alt="Tree stump grinding before and after area" />
+        <img class="hero-logo" src="/stump-before-after.webp" alt="Before and after tree stump grinding in a residential yard" />
         <div>
           <h1>Professional Tree Stump Grinding</h1>
-          <p>We do one thing and do it right: safe, affordable treestump grinding and root removal. No landscaping upsells, no massive machinery.</p>
 	      <p style="font-size: 1rem; color: #52b788; margin-top: 1rem; font-weight: 500;">
 	      ✉️ Email: <a href="mailto:yourbusinessemail@gmail.com" style="color: #d8f3dc; text-decoration: underline;">grandriverstumpremoval@yahoo.com</a>
 	      </p>
@@ -203,7 +204,7 @@
 		<ul>
 		<li style="margin-bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
 		<span style="font-size: 1,2rem; line-height: 1;">🌿</span>
-      	<span><strong>Tight-Space, Lawn-Safe Machinery:</strong> No massive commercial logging trucks or heavy tractors, agile grinding gear that easily rolls through a standard backyard fence gate without digging up your grass or rutting your gardens.</span>
+      	<span><strong>Tight-Space, Lawn-Safe Machinery:</strong> No massive commercial logging trucks or heavy tractors, agile grinding gear that easily rolls through a standard backyard.</span>
     	</li>
     
 		<li style="margin-bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
@@ -243,14 +244,6 @@
 			</div>
   		</div>
 
-  		<!-- Full-Width Lawn-Safe Machine Showcase Card -->
-		<div style="background-color: #f4f9f6; border: 1px solid #d8f3dc; padding: 1rem; border-radius: 6px; display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 1.5rem;">
-			<!-- Place your compact machine picture here -->
-			<img src="/machine__grinding.jpg" alt="Lawn-safe compact stump grinding equipment" style="width: 100%; max-height: 220px; object-fit: cover; border-radius: 4px;" />
-			<div style="text-align: center;">
-			<h4 style="margin: 0 0 5px 0; color: #1b4332; font-size: 1rem;">🛡️ Compact Residential Machinery</h4>
-			<p style="margin: 0; font-size: 0.85rem; color: #444; line-height: 1.4;">This is the exact scale of gear our network utilizes. It rolls through standard backyard gates effortlessly, leaving your flowerbeds, fencing, and turf completely untouched.</p>
-		</div>
   </div>
 		</section>
 
