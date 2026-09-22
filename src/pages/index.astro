@@ -47,10 +47,25 @@
 	}
 	
 	.logo-wrapper { display: flex; align-items: center; gap: 10px; }
-	.logo-img { width: 28px; height: auto; object-fit: contain; flex-shrink: 0; }
+	.logo-img { width: 48px; height: auto; object-fit: contain; flex-shrink: 0; }
 	.logo-text { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: white; }
+	.hero-content { display: flex; align-items: center; justify-content: center; gap: 1.75rem; max-width: 1100px; margin: 0 auto; text-align: left; }
+	.hero-logo {
+		width: clamp(260px, 30vw, 380px);
+		height: 280px;
+		object-fit: cover;
+		border-radius: 14px;
+		box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+		border: 3px solid rgba(255,255,255,0.25);
+		background: rgba(255,255,255,0.08);
+	}
 	@media (min-width: 600px) {
-		.logo-img { width: 32px; }
+		.logo-img { width: 56px; }
+		.logo-text { font-size: 1.35rem; }
+	}
+	@media (max-width: 720px) {
+		.hero-content { flex-direction: column; text-align: center; }
+		.hero-logo { width: min(90vw, 320px); height: 220px; }
 	}
 	
 	.phone-link { 
@@ -145,14 +160,11 @@
   <body>
 
 <header>
-  <div class="logo-wrapper">
-    <!-- Clean, Tree Stump Logo -->
+  <div class="logo-wrapper" style="display: none;">
     <img class="logo-img" src="/logo.png" alt="Grand River Stump Removal Logo" />
-    
-	<span class="logo-text">Grand River Stump Removal</span>
+    <span class="logo-text">Grand River Stump Removal</span>
   </div>
   <div>
-    <!-- Your active mobile click-to-call link -->
     <a href="tel:6395600100" class="phone-link" style="color: #52b788; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
       <span>📞</span> 
 	  <span class="phone-text" style="border-bottom: 1px dashed #52b788;">
@@ -163,11 +175,16 @@
 </header>
 
     <section class="hero">
-      <h1>Professional Tree Stump Grinding</h1>
-      <p>We do one thing and do it right: safe, affordable treestump grinding and root removal. No landscaping upsells, no massive machinery.</p>
-	  <p style="font-size: 1rem; color: #52b788; margin-top: 1rem; font-weight: 500;">
-	  ✉️ Email: <a href="mailto:yourbusinessemail@gmail.com" style="color: #d8f3dc; text-decoration: underline;">grandriverstumpremoval@yahoo.com</a>
-	  </p>
+      <div class="hero-content">
+        <img class="hero-logo" src="/grinding%201.avif" alt="Tree stump grinding before and after area" />
+        <div>
+          <h1>Professional Tree Stump Grinding</h1>
+          <p>We do one thing and do it right: safe, affordable treestump grinding and root removal. No landscaping upsells, no massive machinery.</p>
+	      <p style="font-size: 1rem; color: #52b788; margin-top: 1rem; font-weight: 500;">
+	      ✉️ Email: <a href="mailto:yourbusinessemail@gmail.com" style="color: #d8f3dc; text-decoration: underline;">grandriverstumpremoval@yahoo.com</a>
+	      </p>
+        </div>
+      </div>
     </section>
 
     <main class="container">
@@ -186,27 +203,27 @@
 		<ul>
 		<li style="margin-bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
 		<span style="font-size: 1,2rem; line-height: 1;">🌿</span>
-      	<span><strong>Tight-Space, Lawn-Safe Machinery:</strong> No massive commercial logging trucks or heavy tractors. Our operators utilize compact, agile grinding gear that easily rolls through a standard backyard fence gate without digging up your grass or rutting your gardens.</span>
+      	<span><strong>Tight-Space, Lawn-Safe Machinery:</strong> No massive commercial logging trucks or heavy tractors, agile grinding gear that easily rolls through a standard backyard fence gate without digging up your grass or rutting your gardens.</span>
     	</li>
     
 		<li style="margin-bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
 		<span style="font-size: 1.2rem; line-height: 1;">💰</span>
-		<span><strong>Fair Budget Pricing (No Upselling):</strong> We don't do massive corporate tree extractions, which means we never try to upsell you on expensive hedge trimming or branch removal packages. You get simple, straightforward stump grinding built for residential household budgets.</span>
+		<span><strong>Fair Budget Pricing (No Upselling):</strong> You get simple, straightforward stump grinding built for residential household budgets.</span>
 		</li>
 
 		<li style="margin-bottom: 1.25rem; display: flex; gap: 10px; align-items: start;">
 		<span style="font-size: 1.2rem; line-height: 1;">⚡</span>
-		<span><strong>Fast, Small-Scale Specialists:</strong> Got just one small shrub root blocking a new fence line or a rotting oak base in the middle of your turf? No job is too small. Get clear text-message updates, quick phone estimates, and fast project turnarounds.</span>
+		<span><strong>Fast, Small-Scale Specialists:</strong> No job is too small. Get clear text-message updates, quick phone estimates, and fast project turnarounds.</span>
 		</li>
   		</ul>
 
         <h3>📍 Our Simple 3-Step Process:</h3>
 		<ol style="padding-left: 1.2rem; line-height: 1.6; color: #444;">
 		  <li style="margin-bottom: 1rem;">
-			<strong>Submit Details & Photo:</strong> Fill out our quick form or text a picture of your stump to our line. We evaluate it right away—no stressful home appointments or sales calls required.
+			<strong>Submit Details & Photo:</strong> Fill out our quick form or text a picture of your stump to our line. We evaluate it right away—no stressful home appointments required.
 		  </li>
 		  <li style="margin-bottom: 1rem;">
-			<strong>Get a Clear, Upfront Quote:</strong> We send you a straightforward, flat-rate price based strictly on your stump's size and backyard gate access. No hidden fees, no pressure.
+			<strong>Get a Clear, Upfront Quote:</strong> We send you a straightforward, flat-rate price based strictly on your stump's size and backyard gate access.
 		  </li>
 		  <li style="margin-bottom: 1rem;">
 			<strong>Lawn-Safe Grinding:</strong> A local specialist rolls in with a compact machine, grinds the stump below ground level, updates you, and leaves your yard tidy.
@@ -223,12 +240,7 @@
       		<!-- Place your before/after stump image here -->
       			<img src="/before_after_stump.jpg" alt="Before and after tree stump grinding a residential lawn in Paris Ontario" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);" />
       			<span style="position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,0.7); color: white; padding: 2px 8px; font-size: 0.8rem; font-weight: bold; border-radius: 4px;">Before</span>
-		</div>
-    		<div style="position: relative;">
-      		<!-- Place your clean finished grass/mulch image here -->
-      			<img src="/stump_before_after.avif" alt="Clean lawn layout after tree root grinding" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);" />
-      			<span style="position: absolute; bottom: 8px; left: 8px; background: #2d6a4f; color: white; padding: 2px 8px; font-size: 0.8rem; font-weight: bold; border-radius: 4px;">After</span>
-    		</div>
+			</div>
   		</div>
 
   		<!-- Full-Width Lawn-Safe Machine Showcase Card -->
