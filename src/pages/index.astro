@@ -88,7 +88,8 @@
 		padding: 3.5rem 1.25rem; 
 		text-align: center; 
 	}
-	.hero h1 { margin: 0 0 1rem 0; font-size: 2.2rem; line-height: 1.2; font-weight: 800; }
+	.hero h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; line-height: 1.2; font-weight: 800; }
+	.hero h2 { margin: 0 0 1rem 0; font-size: clamp(1.2rem, 2vw, 1.8rem); line-height: 1.3; font-weight: 700; color: #d8f3dc; }
 	.hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; color: #d8f3dc; }
 	
 	/* Fluid Content Container Grid Layout rules */
@@ -166,12 +167,13 @@
     <img class="logo-img" src="/logo.png" alt="Grand River Stump Removal Logo" />
     <span class="logo-text">Grand River Stump Removal</span>
   </div>
-  <div>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px;">
     <a href="tel:6395600100" class="phone-link" style="color: #52b788; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
-      <span>📞</span> 
-	  <span class="phone-text" style="border-bottom: 1px dashed #52b788;">
-	  Call or Text: 639-560-0100
-	  </span>
+      <span>📞</span>
+      <span class="phone-text" style="border-bottom: 1px dashed #52b788;">Call or Text: 639-560-0100</span>
+    </a>
+    <a href="mailto:grandriverstumpremoval@yahoo.com" style="color: #d8f3dc; text-decoration: underline; font-weight: 600; font-size: 0.95rem;">
+      ✉️ grandriverstumpremoval@yahoo.com
     </a>
   </div>
 </header>
@@ -180,10 +182,8 @@
       <div class="hero-content">
         <img class="hero-logo" src="/stump-before-after.webp" alt="Before and after tree stump grinding in a residential yard" />
         <div>
-          <h1>Professional Tree Stump Grinding</h1>
-	      <p style="font-size: 1rem; color: #52b788; margin-top: 1rem; font-weight: 500;">
-	      ✉️ Email: <a href="mailto:yourbusinessemail@gmail.com" style="color: #d8f3dc; text-decoration: underline;">grandriverstumpremoval@yahoo.com</a>
-	      </p>
+          <h1>Grand River Stump Removal</h1>
+          <h2>Professional Tree Stump Grinding</h2>
         </div>
       </div>
     </section>
@@ -244,7 +244,6 @@
 			</div>
   		</div>
 
-  </div>
 		</section>
 
       <!-- This plain HTML form hooks directly into Netlify's automatic database detection system -->
