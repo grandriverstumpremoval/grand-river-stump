@@ -69,6 +69,33 @@
 		.hero-content { flex-direction: column; text-align: center; }
 		.hero-logo { width: min(92vw, 420px); height: auto; }
 	}
+	@media (max-width: 640px) {
+		header {
+			padding: 0.9rem 0.75rem;
+		}
+		header > div[style*="justify-content: space-between"] {
+			justify-content: center !important;
+			gap: 10px !important;
+		}
+		header a[href^="mailto:"],
+		header a[href^="tel:"] {
+			width: 100%;
+			justify-content: center;
+			text-align: center;
+		}
+		.hero {
+			padding: 2.25rem 0.9rem;
+		}
+		.hero h1 {
+			font-size: clamp(1.9rem, 8vw, 2.5rem);
+		}
+		.hero h2 {
+			font-size: clamp(1.2rem, 5vw, 1.8rem);
+		}
+		.hero p {
+			font-size: 1rem;
+		}
+	}
 	
 	.phone-link { 
 		color: #52b788; 
@@ -83,7 +110,7 @@
 
 	/* Full-bleed Hero container displaying your custom background asset */
 	.hero { 
-		background: linear-gradient(rgba(18, 48, 35, 0.9), rgba(27, 67, 50, 0.85)), url('/hero-bg.jpg') center/cover no-repeat; 
+		background: linear-gradient(rgba(18, 48, 35, 0.9), rgba(27, 67, 50, 0.85));
 		color: white; 
 		padding: 3.5rem 1.25rem; 
 		text-align: center; 
