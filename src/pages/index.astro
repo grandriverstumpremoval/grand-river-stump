@@ -70,10 +70,14 @@
 		.hero-logo { width: min(92vw, 420px); height: auto; }
 	}
 	@media (max-width: 640px) {
+		* { box-sizing: border-box; }
+		body { overflow-x: hidden; }
+		img, iframe, svg { max-width: 100%; }
 		header {
 			padding: 0.9rem 0.75rem;
 		}
-		header > div[style*="justify-content: space-between"] {
+		header > div {
+			width: 100% !important;
 			justify-content: center !important;
 			gap: 10px !important;
 		}
@@ -94,6 +98,34 @@
 		}
 		.hero p {
 			font-size: 1rem;
+		}
+		.container {
+			padding: 0 0.75rem;
+		}
+		.content-box h2 {
+			font-size: clamp(1.9rem, 7vw, 2.6rem);
+		}
+		.content-box h3 {
+			font-size: 1.1rem;
+		}
+		.content-box li,
+		.content-box p,
+		.content-box ol,
+		.content-box ul {
+			font-size: 0.98rem;
+		}
+		.form-box {
+			padding: 1rem;
+		}
+		.submit-btn {
+			font-size: 1rem;
+		}
+		footer {
+			padding: 2rem 0.9rem;
+		}
+		footer iframe {
+			height: 280px;
+			width: 100%;
 		}
 	}
 	
